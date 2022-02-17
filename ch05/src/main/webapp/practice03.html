@@ -4,27 +4,36 @@
 <meta charset="utf-8">
 <title>4장 간단한 회원 가입폼</title>
 <style type="text/css">
-* {
-	margin: 0;
-	padding: 0;
+* {	margin: 0;	padding: 0; }
+
+body {	font-family: "맑은 고딕";	font-size: 0.75em;	color: #333;}
+
+#join-form {
+	width: 190px; 
+	border:1px solid #666; 
+	margin: 50px auto; 
+	padding: 10px;
 }
 
-body {
-	font-family: "맑은 고딕";
-	font-size: 0.75em;
-	color: #333;
-}
+label.legend {display : block; margin-top:10px} /* 떨어진다 block*/
+
+fieldset {margin-top: 10px; border:none}
+input[type="submit"] {display: block; margin: 10px auto ; width: 100px;}
 </style>
 </head>
 <body>
 	<form id="join-form" method="get">
 
-		<label class="legend">아이디</label> <input name="userid" type="text">
-		<br> <label class="legend">패스워드</label> <input name="passwprd"
-			type="password">
+		<label class="legend">아이디</label>
+		<input name="userid" type="text">
+		
+		<label class="legend">패스워드</label>
+		<input name="passwprd" type="password">
 
 		<fieldset>
 			<legend>생년월일</legend>
+			
+			
 			<select>
 				<option value="1970">1970</option>
 			</select> <label></label> <select>
