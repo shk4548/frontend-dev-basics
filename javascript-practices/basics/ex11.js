@@ -1,5 +1,5 @@
 /*
-    Array 메서드 (Array.prototype)
+    Array 객체 메서드 (Array.prototype.*)
 */
 var colors = ['black', 'white', 'yellow'];
 var fruits = ['apple', 'mango', 'banana'];

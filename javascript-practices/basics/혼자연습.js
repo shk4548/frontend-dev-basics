@@ -1,15 +1,17 @@
-var c = [1, 2, 3]; 
-var d = c; 
-d.push(4); // 실제 공유한 배열 값이 바뀌어 공유하던 c, d의 값이 바뀜 c;
-// [1, 2, 3, 4] d; 
-// [1, 2, 3, 4] 
-var e = [1, 2, 3];
- var f = e; 
- e; 
- // [1, 2, 3] 
- f; 
- // [1, 2, 3]
-  f = [4, 5, 6]; e; 
-  // [1, 2, 3] f; // [4, 5, 6]
+let person1 = {
+    name: 'Jo'
+};
 
-console.log("c :" + c + "d :" +d +"e "+ e+ " f: " + f);
+let person2 = {
+    name: 'Kim',
+    study: function() {
+        console.log(this.name + '이/가 공부를 하고 있습니다.');
+    }
+};
+
+person2.study(); // Kim이/가 공부를 하고 있습니다.
+
+// bind()
+let student = person2.study.bind(person1);
+
+student(); // Jo이/가 공부를 하고 있습니다.
