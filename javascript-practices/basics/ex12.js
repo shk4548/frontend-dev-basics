@@ -22,6 +22,8 @@ Array.prototype.insert = function(index, value){
         // });
         
         // 해결 방법 2: bind로 함수 실행 때의 this를 세팅 해줄 수 잇다.
+        // a.insert(2, ['a', 'b', 'c']) // 기대 [1,2,'a','b','c']
+        // console.log(a);
         value.forEach(function(e){
             this.splice(index++, 0 , e);
         }.bind(this));
