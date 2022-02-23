@@ -3,6 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+
+		// setAttribute 사용  setAttribute ('이름', "값 ");
+		
+window.addEventListener("load", function(){
+	var imgElement = document.createElement("img");
+	
+	// 속성 (attribute)을 읽기/쓰기 위해서 setAttribute / getAttribute 를 사용한다.
+	
+	// (표준[property] + 비표준[property가 아님]) 속성(attribute)을 읽기 / 쓰기 위해서 setAttribute/getAttribute를 사용한다.
+	
+	// 이미지 url
+	imgElement.setAttribute('src', "http://img.danawa.com/prod_img/500000/517/614/img/14614517_1.jpg?shrink=330:330&_v=20210629154359" );
+	// width 설정
+	imgElement.setAttribute('style', 'width:200px');
+	// alt 명설정
+	imgElement.setAttribute('alt', "죠르디");
+	// title명 설정
+	imgElement.setAttribute ('title',  "죠르디는 공룡입니다");
+	
+	//동적으로 렌더링 할때 data를 붙혀주는게 좋음 밑에의 경우 data-no로 (표준화)
+	imgElement['no'] = 10; 						// property
+	imgElement.setAttribute('data-name','suun');// 비표준 속성 property가 아님 
+												// 사용시 'data-' prefix를 달아준다. (attribute)
+	
+	
+	// imgElement 시간 설정 
+	setTimeout(function(){
+		document.body.appendChild(imgElement);
+		console.log(imgElement['no'] /*property, 10 */, imgElement.getAttribute("no") /*attribute(tag), null */);  // attribute != property 는 명백히 다름 
+
+		console.log(imgElement.alt, imgElement['data-name'] , imgElement.getAttribute('data-name'));
+		// 접근할때  imgElement.이름 or imgElemet['이름'] 
+		// . or 배열처럼 해서 사용한다
+													
+	},2000);
+});
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>

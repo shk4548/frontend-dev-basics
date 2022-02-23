@@ -3,6 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.addEventListener("load",function(){
+	// 1. id로 가져오기
+	var header01 = document.getElementById("header-01");
+	var header02 = document.getElementById("header-02");
+	
+	// 2. Tag Name으로 가져오기
+	var h4s = document.getElementsByTagName('h4'); // 똑같은 이름이니까 배열 사용
+
+	// 3. Class Name으로 가져오기
+	var h5s = document.getElementsByClassName("header");	
+
+	// 4. css 선택자 로 가져오기
+	
+	var header07 = document.querySelector("#header-07");
+	var header08 = document.querySelector("#header-08");
+	
+	var h6s = document.querySelectorAll(".header2");
+	
+	
+	setTimeout(function(){
+		header01.innerText += " by getElementById()";
+		header02.innerText += " by getElementById()";
+		
+		h4s[0].innerText += " by getElementsByTagName()";
+		h4s[1].innerText += " by getElementsByTagName()";
+		
+		h5s[0].innerText += " by getElementByClassName()";
+		h5s[1].innerText += " by getElementByClassName()";
+		
+		header07.innerText += " by querySelector()"; 	
+		header08.innerText += " by querySelector()"; 		
+
+ 		h6s[1].innerText += " by querySelectorAll()";
+
+	},2000)
+});	
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>

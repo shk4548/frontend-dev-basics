@@ -3,6 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.addEventListener("load", function(){
+	var imgElement = document.createElement("img");
+	// 이미지 url
+	imgElement.src = "http://img.danawa.com/prod_img/500000/517/614/img/14614517_1.jpg?shrink=330:330&_v=20210629154359";
+	// width 설정
+	imgElement.style.width = "200px";
+	// alt 명설정
+	imgElement.alt = "죠르디";
+	// title명 설정
+	imgElement.title = "죠르디는 공룡입니다";
+	
+	// imgElement 시간 설정 
+	setTimeout(function(){
+		document.body.appendChild(imgElement);
+	},2000);
+});
+</script>
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>
