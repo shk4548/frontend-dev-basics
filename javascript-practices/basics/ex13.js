@@ -38,6 +38,7 @@ var str7 = "string1 string2 string3";
 
 var index = str7.indexOf('string2');
 console.log(index);
+console.log(str7.indexOf('string2'));
 
 var index = str7.indexOf('string4');
 console.log(index); // 찾지못하면 -1 이 출력됨
