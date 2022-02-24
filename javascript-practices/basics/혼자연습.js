@@ -1,17 +1,23 @@
-let person1 = {
-    name: 'Jo'
+var MyObject = function(name,age){
+    this.name = name,
+    this.age = age    
 };
 
-let person2 = {
-    name: 'Kim',
-    study: function() {
-        console.log(this.name + '이/가 공부를 하고 있습니다.');
-    }
-};
+// myobject 안에 prototype 생김
 
-person2.study(); // Kim이/가 공부를 하고 있습니다.
+obj1 = new MyObject('딸기',10);
+// _proto_ 생김
 
-// bind()
-let student = person2.study.bind(person1);
+MyObject.prototype.bbbb = 30;
+obj1.bbbb = 50;
 
-student(); // Jo이/가 공부를 하고 있습니다.
+
+obj2 = new MyObject('자바', 20);
+
+console.log(obj1.bbbb);
+console.log(obj2.bbbb);
+
+console.log(obj1);
+console.log(obj2);
+
+console.log(MyObject)

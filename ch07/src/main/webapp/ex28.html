@@ -6,7 +6,11 @@
 <script>
 $(function(){
 	setTimeout(function(){
-		
+		// 감싸는것
+		$(".d1").wrap("<h2>");
+		$(".d2")
+			.wrap("<h3>")
+			.css('padding-left','50px');
 	}, 1000);
 });
 </script>

@@ -6,16 +6,17 @@
 <script>
 $(function(){
 	setTimeout(function(){
-		
+		var html = "<strong>" + "아리가뤄~" + "</strong>";
+		$("#p1").prepend(html);
 	}, 1000);
 });
 </script>
 </head>
 <body>
-	<h1>DOM 조작 API - prepend()</h1>
+	<h1>DOM 조작 API - prepend() :생성</h1>
 	
 	<p id="p1">
-		마바사아자차카타파하
+		가다나라마바사아자차
 	</p>
 </body>
 </html>
